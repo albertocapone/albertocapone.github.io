@@ -24,6 +24,20 @@ main {
 }
 
 #heading {
+    position: relative;
     text-align: center;
     letter-spacing: 10px;
+}
+
+#heading > h2 {
+    padding-right: 27px;
+}
+
+#pointer {
+    position: absolute;
+    top: 38px;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: white;
 }
