@@ -1,6 +1,6 @@
 function makeItBlink() {
     const pointer = document.getElementById('pointer');
-    pointer.style.display != "none" ? pointer.style.display = "none" : pointer.style.display = "block";
+    pointer.style.visibility != "hidden" ? pointer.style.visibility = "hidden" : pointer.style.visibility = "visible";
 }
 
 setInterval(makeItBlink, 500);
