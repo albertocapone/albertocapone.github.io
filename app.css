@@ -293,9 +293,9 @@ nav li.active > h3 {
     height: 24px;
     width: 57px;
     border-radius: 7px;
-    border: 1px solid rgb(39, 39, 39);
+    border: 1px solid #818181;
     margin-right: 5px;
-    background-image: linear-gradient(-20deg, #363333, #134cc1de);
+    background-image: linear-gradient(to left, #2861b9, blue);
     color: white;
     font-size: 12px;
     text-align: center;
