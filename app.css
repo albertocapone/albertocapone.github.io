@@ -216,6 +216,7 @@ nav li.active > h3 {
     width: 75%;
     flex-basis: 90%;
     border-left: 1px solid gray;
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -225,12 +226,18 @@ nav li.active > h3 {
     position: relative;
     width: 100%;
     flex-basis: 200px;
-    padding: 8px;
+    padding: 5px;
+    /* border-bottom: 1px solid gray; */
+    margin-bottom: 30px;
     opacity: 0;
 }
 
 .entry a:hover {
     color: blue;
+}
+
+.entry span {
+    font-size: 13px;
 }
 
 .entry p {
@@ -242,16 +249,24 @@ nav li.active > h3 {
 .timedot {
     position: absolute;
     top: 25%;
-    left: -55px;
-    width: 35px;
+    left: -108.5px;
+    width: 85px;
     height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.timedot img {
+    width: 22px;
+    margin-left: 5px;
 }
 
 .timedot::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: -22px;
+    right: -10px;
     display: block;
     width: 5px;
     height: 5px;
@@ -259,10 +274,36 @@ nav li.active > h3 {
     transform: translateY(-50%);
 }
 
-.entry img {
+.entry > img {
     float: right;
     width: 40%;
     margin-left: 10px;
+}
+
+#tech {
+    position: absolute;
+    padding: 0 3px;
+    top: 75%;
+    left: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.techtag {
+    height: 24px;
+    width: 57px;
+    border-radius: 7px;
+    border: 1px solid rgb(39, 39, 39);
+    margin-right: 5px;
+    background-image: linear-gradient(-20deg, #363333, #134cc1de);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.html-t {
+    content: "html";
 }
 
 #portfolio, #contatti, #skills {
