@@ -7,31 +7,709 @@
 body {
     width: 100vw;
     height: 100vh;
+    min-height: 540px;
+    min-width: 400px;
     font-family: 'Share Tech',
     sans-serif;
-    background-image: linear-gradient(to right, rgb(15, 14, 14), rgb(24, 27, 24));
-    color: rgb(24, 78, 24);
 }
 
-main {
+a {
+    color: inherit;
+    text-decoration-line: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+#wrapper {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+}
+
+#wrapper > nav {
+    background-image: linear-gradient(lightblue, blue);
+    width: 300px;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-#heading {
-    text-align: center;
-    letter-spacing: 10px;
+#social {
+    position: relative;
+    padding-right: 5px;
 }
 
-#pointer {
-    display: inline-block;
-    position: relative;
-    top: 5px;
-    right: 15px;
-    width: 25px;
-    height: 25px;
+#copiedAlert {
+    display: none;
+    position: absolute;
+    top: -38px;
+    left: -75px;
+    width: 128px;
+    height: 30px;
+    padding: 8px 0;
+    font-size: 11px;
+    border-radius: 10px;
+    background-color: rgb(24 24 24 / 90%);
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+}
+
+#copiedAlert:before {
+   content: "";
+   position: absolute;
+   top: 38px;
+   margin-top: -10px;
+   left: 78px;
+   border: solid 7px transparent;
+   border-top-color: rgb(24 24 24 / 90%);
+   z-index: 1;
+}
+
+#wrapper > main {
+    width: calc(100% - 300px);
+    height: 100%;
+    padding: 50px 15px;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#img-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: 50px 0 10px 0;
     background-color: white;
+}
+
+#img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+nav > .heading {
+    text-align: center;
+}
+
+nav > .heading > h2 {
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+nav > ul {
+    margin: 70px 0;
+    list-style-type: none;
+    letter-spacing: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 0 3px;
+}
+
+nav li > h3 {
+    width: 100%;
+    text-align: center;
+}
+
+nav li > h3:hover {
+    text-shadow: 0 0 2px hsl(0, 0%, 90%);
+}
+
+nav li.active:before,
+nav li.active:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: black;
+    transform: translateY(-50%);
+    box-shadow: 0 0 2px hsl(0, 0%, 90%);
+}
+
+nav li.active:before {
+    left: -8px;
+}
+
+nav li.active:after {
+    right: -8px;
+}
+
+nav li.active > h3 {
+    text-shadow: 0 0 2px hsl(0, 0%, 90%);
+}
+
+#social {
+    font-size: 20px;
+}
+
+#social > * {
+    transition: all 0.2s linear;
+}
+
+#social > *:hover:not(#copiedAlert) {
+   text-shadow: 0.1px 0 1px hsl(0, 0%, 90%);
+}
+
+#portfolio, #contatti, #skills {
+    width: 80%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#skills, #contatti {
+    align-items: flex-start;
+    min-height: 400px;
+}
+
+#contatti > ul {
+    list-style-type: none;
+}
+
+#contatti > ul li {
+    margin-bottom: 10px;
+}
+
+#contatti > ul li > *:not(:first-child) {
+    color: blue;
+}
+
+#contatti > ul li > *:first-child {
+    margin-right: 8px;
+}
+
+#portfolio>.heading,
+#contatti>.heading,
+#skills>.heading {
+    align-self: flex-start;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+#portfolio .heading > h4 {
+    color: gray;
+    font-size: 20px;
+}
+
+#history { 
+    width: 75%;
+    flex-basis: 90%;
+    border-left: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.entry {
+    position: relative;
+    width: 100%;
+    flex-basis: 200px;
+    padding: 8px;
+    opacity: 0;
+}
+
+.entry a:hover {
+    color: blue;
+}
+
+.entry p {
+    margin-top: 5px;
+    color: gray;
+    padding-left: 3px;
+}
+
+.timedot {
+    position: absolute;
+    top: 25%;
+    left: -55px;
+    width: 35px;
+    height: 20px;
+}
+
+.timedot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: blue;
+    transform: translateY(-50%);
+}
+
+.entry img {
+    float: right;
+    width: 40%;
+    margin-left: 10px;
+}
+
+#portfolio, #contatti, #skills {
+    display: none;
+}
+
+#portfolio.active,
+#contatti.active,
+#skills.active {
+    display: flex;
+}
+
+
+.slide-in-left {
+    -webkit-animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    -webkit-animation: fade-in 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: fade-in 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in-left {
+    -webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-left {
+    0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+#skill {
+    list-style: none;
+    font-size: 12px;
+    width: 296px;
+    position: relative;
+    line-height: 2em;
+    padding: 30px 0;
+}
+
+#skill li {
+    margin-bottom: 30px;
+    background: #e9e5e2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ddd9), to(#e9e5e2));
+    background-image: -webkit-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: -moz-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: -ms-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: -o-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: linear-gradient(top, #e1ddd9, #e9e5e2);
+    height: 16px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+    -webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+    box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+}
+
+#skill li h3 {
+    position: relative;
+    top: -25px;
+}
+
+.bar {
+    height: 14px;
+    margin: 1px 2px;
+    position: absolute;
+    border-radius: 10px;
+    -moz-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+    -webkit-box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+    box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+}
+
+.javascript, .html-css, .jquery, .sass, .php, .mysql, .laravel, .node {
+     background-color: blue;
+     background-image: -webkit-linear-gradient(183deg, #b7b7b7, blue);
+     background-image: -moz-linear-gradient(183deg, #b7b7b7, blue);
+     background-image: -ms-linear-gradient(183deg, #b7b7b7, blue);
+     background-image: -o-linear-gradient(183deg, #b7b7b7, blue);
+     background-image: linear-gradient(183deg, #b7b7b7, blue);
+}
+
+.javascript {
+    width: 80%;
+    animation: javascript 2s ease-out;
+    -moz-animation: javascript 2s ease-out;
+    -webkit-animation: javascript 2s ease-out;
+}
+
+.html-css {
+    width: 90%;
+    animation: html-css 2s ease-out;
+    -moz-animation: html-css 2s ease-out;
+    -webkit-animation: html-css 2s ease-out;
+}
+
+.jquery {
+    width: 80%;
+    animation: jquery 2s ease-out;
+    -moz-animation: jquery 2s ease-out;
+    -webkit-animation: jquery 2s ease-out;
+}
+
+.sass {
+    width: 80%;
+    animation: sass 2s ease-out;
+    -moz-animation: sass 2s ease-out;
+    -webkit-animation: sass 2s ease-out;
+}
+
+.php {
+    width: 65%;
+    animation: php 2s ease-out;
+    -moz-animation: php 2s ease-out;
+    -webkit-animation: php 2s ease-out;
+}
+
+.mysql {
+    width: 60%;
+    animation: mysql 2s ease-out;
+    -moz-animation: mysql 2s ease-out;
+    -webkit-animation: mysql 2s ease-out;
+}
+
+.laravel {
+    width: 70%;
+    animation: laravel 2s ease-out;
+    -moz-animation: laravel 2s ease-out;
+    -webkit-animation: laravel 2s ease-out;
+}
+
+.node {
+    width: 70%;
+    animation: node 2s ease-out;
+    -moz-animation: node 2s ease-out;
+    -webkit-animation: node 2s ease-out;
+}
+
+@keyframes javascript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes html-css {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes jquery {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes sass {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes php {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes mysql {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes laravel {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes node {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+
+@-moz-keyframes javascript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-moz-keyframes html-css {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@-moz-keyframes jquery {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-moz-keyframes sass {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-moz-keyframes php {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+@-moz-keyframes mysql {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@-moz-keyframes laravel {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@-moz-keyframes node {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@-webkit-keyframes javascript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes html-css {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes jquery {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes sass {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes php {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+@-webkit-keyframes mysql {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@-webkit-keyframes laravel {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@-webkit-keyframes node {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
 }

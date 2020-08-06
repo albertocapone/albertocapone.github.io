@@ -4,20 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alberto Capone - Portfolio - Junior Full Stack Web Developer</title>
+    <script src="https://kit.fontawesome.com/f5e66b81f3.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <main>
-        <div id="heading">
-            <h1>WIP</h1>
-            <h2>
-                Please, come back later
-                <span id="pointer"></span>
-            </h2>
-        </div>
-    </main> 
+    <div id="wrapper">
+        <nav>
+            <div id="img-box">
+                <img src="https://avatars0.githubusercontent.com/u/60943202?s=460&u=d1f32481e08b16c7e0dcd008d2fe3a7cb0a5aafc&v=4" alt="Alberto Capone">
+            </div>
+            <div class="heading">
+                <h1>ALBERTO CAPONE</h1>
+                <h2>JR FULL STACK WEB DEVELOPER</h2>
+            </div>
+            <ul id="sideButtons">
+                <li data-tab="1" class="active">
+                    <h3>
+                        PORTFOLIO
+                    </h3>
+                </li>
+                <li data-tab="2">
+                    <h3>
+                        CONTATTI
+                    </h3>
+                </li>
+                <li data-tab="3">
+                    <h3>
+                        SKILLS
+                    </h3>
+                </li>
+            </ul>
 
-    <script src="app.js"></script>
+            <div id="social">
+                <div id="copiedAlert">
+                    Mail copied to clipboard&#33;
+                </div>
+                <a id="myMail">
+                    <i class="fas fa-at"></i>
+                </a>
+                <a href="https://github.com/albertocapone">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/albertocapone">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </nav>
+        <main id="scrollable">
+
+            <div id="portfolio" class="active fade-in-left" data-tab="1">
+                <div class="heading">
+                    <h3>
+                        PORTFOLIO
+                    </h3>
+                    <h4>Dai un'occhiata ai miei lavori.</h4>
+                </div>
+                <div id="history">
+                    <div class="entry">
+                        <div class="timedot">2020</div>
+                        <img src="img/airboolnbsized.png" alt="">
+                        <h2>
+                            <a href="#">AirBnB Replica</a>
+                        </h2>
+                        <p>Complessa web app ispirata ad AirBnB, formata da back-end (autenticazione a più ruoli, integrazione Payment Provider,
+                        geolocation API, rilevamento accessi IP) e interfaccia front-end responsive.</p>
+                    </div>
+                    <div class="entry">
+                        <div class="timedot">2020</div>
+                        <img src="img/boolflix.png" alt="">
+                        <h2>
+                            <a href="https://albertocapone.github.io/ajax-ex-boolflix">Netflix Replica</a>
+                        </h2>
+                        <p>Web app con interfaccia responsive ispirata a Netflix dotata di funzionalità di ricerca media attraverso chiamata AJAX ad un servizio API, salvataggio preferiti client-side.</p>
+                    </div>
+                    <div class="entry">
+                        <div class="timedot">2020</div>
+                        <img src="img/boolzap.png" alt="">
+                        <h2>
+                            <a href="https://albertocapone.github.io/js-html-css-boolzap">Whatsapp Web Replica</a>
+                        </h2>
+                        <p>Mockup della versione web di Whatsapp con simulazione funzioni di ricerca contatti, cancellazione e
+                        inserimento messaggi.</p>
+                    </div>
+                    <div class="entry">
+                        <div class="timedot">2020</div>
+                        <img src="img/spotify.png" alt="">
+                        <h2>
+                            <a href="https://albertocapone.github.io/html-css-spotifyweb">Spotify Replica</a>
+                        </h2>
+                        <p>Mockup responsive di Spotify Web.</p>
+                    </div>
+                    <div class="entry">
+                        <div class="timedot">2020</div>
+                        <img src="img/digital-ocean.png" alt="">
+                        <h2>
+                            <a href="https://albertocapone.github.io/html-css-digitalocean">Digital Ocean Replica</a>
+                        </h2>
+                        <p>Mockup responsive dell'homepage di Digital Ocean.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contatti" class="fade-in-left" data-tab="2">
+                <div class="heading">
+                    <h3>CONTATTI</h3>
+                </div>
+                <ul>
+                    <li>
+                        <span>Phone number:</span>
+                        <i class="fas fa-phone"></i>
+                        <span>+39 391 394 27 11</span>
+                    </li>
+                    <li>
+                        <span>Mail address:</span>
+                        <i class="fas fa-at"></i>
+                        <span>albertocapone@outlook.it</span>
+                    </li>
+                    <li>
+                        <span>Linkedin:</span>
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/albertocapone/">albertocapone</a> 
+                    </li>
+                    <li>
+                        <span>GitHub:</span>
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/albertocapone">albertocapone</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="skills" class="fade-in-left" data-tab="3">
+                <div class="heading">
+                    <h3>SKILLS</h3>
+                </div>
+                <ul id="skill">
+                    <li>
+                        <span class="bar html-css"></span>
+                        <h3>HTML - CSS</h3>
+                    </li>
+                    <li>
+                        <span class="bar javascript"></span>
+                        <h3>JS</h3>
+                    </li>
+                    <li>
+                        <span class="bar jquery"></span>
+                        <h3>jQuery</h3>
+                    </li>
+                    <li>
+                        <span class="bar sass"></span>
+                        <h3>SASS</h3>
+                    </li>
+                    <li>
+                        <span class="bar php"></span>
+                        <h3>PHP</h3>
+                    </li>
+                    <li>
+                        <span class="bar mysql"></span>
+                        <h3>mySQL</h3>
+                    </li>
+                    <li>
+                        <span class="bar laravel"></span>
+                        <h3>Laravel</h3>
+                    </li>
+                    <li>
+                        <span class="bar node"></span>
+                        <h3>Node</h3>
+                    </li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
 </body>
 </html>
