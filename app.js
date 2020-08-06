@@ -57,8 +57,11 @@ function copyToKeyboard() {
 
 function animateOnScroll() {
     var mainHeight = $(this).height();
+    var vpHeight = $(window).height();
+    var vpOrigin = vpHeight - mainHeight;
     $('.entry').each(function () {
-        if ($(this).offset().top > 0 && $(this).offset().top < mainHeight && !$(this).hasClass('slide-in-left')) {
+        var boxOrigin = $(this).offset().top;
+        if (boxOrigin > vpOrigin && boxOrigin < vpHeight - 20 && !$(this).hasClass('slide-in-left')) {
             $(this).addClass('slide-in-left');
             $(this).find('.timedot').addClass('fade-in');
         }
