@@ -61,7 +61,7 @@ function animateOnScroll() {
     var vpOrigin = vpHeight - mainHeight;
     $('.entry').each(function () {
         var boxOrigin = $(this).offset().top;
-        if (boxOrigin > vpOrigin && boxOrigin < vpHeight && !$(this).hasClass('slide-in-left')) {
+        if (boxOrigin > vpOrigin && boxOrigin < vpHeight -20 && !$(this).hasClass('slide-in-left')) {
             $(this).addClass('slide-in-left');
             $(this).find('.timedot').addClass('fade-in');
         }
