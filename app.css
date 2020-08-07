@@ -34,7 +34,7 @@ a:hover {
 }
 
 #wrapper > nav {
-    background-image: linear-gradient(lightblue, blue);
+    background-image: linear-gradient(lightblue, rgb(0, 85, 255));
     width: 300px;
     height: 100%;
     padding: 0 20px;
@@ -106,6 +106,7 @@ nav > .heading {
 nav > .heading > h2 {
     font-size: 19px;
     margin-top: 5px;
+    color: #252020;
 }
 
 nav > ul {
@@ -295,8 +296,8 @@ nav li.active > h3 {
     width: 57px;
     border-radius: 7px;
     border: 1px solid #818181;
-    margin-right: 5px;
-    background-image: linear-gradient(to left, #2861b9, blue);
+    margin: 0 5px 2px;
+    background-image: linear-gradient(to left, #42a4c4, rgb(0, 85, 255));
     color: white;
     font-size: 12px;
     text-align: center;
@@ -422,10 +423,8 @@ nav li.active > h3 {
 #skill li {
     margin-bottom: 30px;
     background: #e9e5e2;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ddd9), to(#e9e5e2));
     background-image: -webkit-linear-gradient(top, #e1ddd9, #e9e5e2);
     background-image: -moz-linear-gradient(top, #e1ddd9, #e9e5e2);
-    background-image: -ms-linear-gradient(top, #e1ddd9, #e9e5e2);
     background-image: -o-linear-gradient(top, #e1ddd9, #e9e5e2);
     background-image: linear-gradient(top, #e1ddd9, #e9e5e2);
     height: 16px;
@@ -454,7 +453,6 @@ nav li.active > h3 {
      background-color: blue;
      background-image: -webkit-linear-gradient(183deg, #b7b7b7, blue);
      background-image: -moz-linear-gradient(183deg, #b7b7b7, blue);
-     background-image: -ms-linear-gradient(183deg, #b7b7b7, blue);
      background-image: -o-linear-gradient(183deg, #b7b7b7, blue);
      background-image: linear-gradient(183deg, #b7b7b7, blue);
 }
