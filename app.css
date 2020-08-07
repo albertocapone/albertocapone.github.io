@@ -347,8 +347,8 @@ nav li.active > h3 {
 
 @-webkit-keyframes slide-in-left {
     0% {
-        -webkit-transform: translateX(1000px);
-        transform: translateX(1000px);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
         opacity: 0;
     }
 
@@ -361,8 +361,8 @@ nav li.active > h3 {
 
 @keyframes slide-in-left {
     0% {
-        -webkit-transform: translateX(1000px);
-        transform: translateX(1000px);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
         opacity: 0;
     }
 
