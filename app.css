@@ -84,8 +84,7 @@ a:hover {
     width: calc(100% - 300px);
     height: 100%;
     padding: 50px 15px 20px;
-    display: flex;
-    justify-content: center;
+    margin: auto;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -211,6 +210,10 @@ nav li.active > h3 {
     align-self: flex-start;
     font-size: 35px;
     margin-bottom: 25px;
+}
+
+#contatti, #skills {
+    margin: auto;
 }
 
 #portfolio .heading > h4 {
@@ -893,7 +896,7 @@ nav li.active > h3 {
     }
 
     #portfolio {
-        margin-left: 75px;
+        margin-left: 70px;
     }
 
     #contatti {
