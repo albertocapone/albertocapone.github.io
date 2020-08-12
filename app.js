@@ -32,8 +32,7 @@ function switchTabs() {
             if ($(this).data('tab') == selectedTab) {
                 $(this).addClass('active')
                 if (selectedTab == 1) {
-                    document.getElementById('scrollable').scrollTo(0, 0);
-                    document.getElementById('scrollable').scrollTo(0, 20);
+                   animateOnScroll();
                 }
             } else {
                 $(this).removeClass('active');
@@ -56,7 +55,7 @@ function copyToKeyboard() {
 }
 
 function animateOnScroll() {
-    var mainHeight = $(this).height();
+    var mainHeight = $('main').height();
     var vpHeight = $(window).height();
     var vpOrigin = vpHeight - mainHeight;
     $('.entry').each(function () {
@@ -69,7 +68,7 @@ function animateOnScroll() {
 }
 
 function init() {
-    document.getElementById('scrollable').scrollTo(0, 20);
+    animateOnScroll();
     $('#sideButtons li').click(switchTabs);
     $('#myMail').click(copyToKeyboard);
     $('main').scroll(animateOnScroll);
