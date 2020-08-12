@@ -69,7 +69,7 @@ function animateOnScroll() {
 }
 
 function init() {
-    document.getElementById('scrollable').scrollBy(0, 10);
+    document.getElementById('scrollable').scrollBy(0, 20);
     $('#sideButtons li').click(switchTabs);
     $('#myMail').click(copyToKeyboard);
     $('main').scroll(animateOnScroll);

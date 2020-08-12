@@ -177,7 +177,6 @@ nav li.active > h3 {
 
 #portfolio, #contatti, #skills {
     width: 80%;
-    min-height: 800px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -185,7 +184,7 @@ nav li.active > h3 {
 
 #skills, #contatti {
     align-items: flex-start;
-    min-height: 400px;
+    height: 500px;
 }
 
 #contatti > ul {
@@ -804,13 +803,11 @@ nav li.active > h3 {
    }
 
    #contatti {
-       min-height: 200px;
-       max-height: 200px;
+       height: 200px;
    }
 
    #skills {
-        min-height: 250px;
-        max-height: 250px;
+        height: 270px;
    }
 
    #skill {
@@ -818,9 +815,8 @@ nav li.active > h3 {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
-    height: 220px;
+    height: 250px;
     width: 100%;
-    padding: 0;
    }
 
    #skill li {
@@ -900,13 +896,11 @@ nav li.active > h3 {
     }
 
     #contatti {
-        min-height: 200px;
-        max-height: 200px;
+        height: 200px;
     }
 
     #skills {
-        min-height: 250px;
-        max-height: 250px;
+        height: 250px;
     }
 
     #skill {
@@ -914,9 +908,8 @@ nav li.active > h3 {
         flex-direction: column;
         flex-wrap: wrap;
         align-content: space-between;
-        height: 185px;
+        height: 250px;
         width: 100%;
-        padding: 0;
     }
 
     #skill h3 {
