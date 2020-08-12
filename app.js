@@ -33,7 +33,7 @@ function switchTabs() {
                 $(this).addClass('active')
                 if (selectedTab == 1) {
                     document.getElementById('scrollable').scrollTo(0, 0);
-                    document.getElementById('scrollable').scrollBy(0, 10);
+                    document.getElementById('scrollable').scrollTo(0, 20);
                 }
             } else {
                 $(this).removeClass('active');
@@ -69,7 +69,7 @@ function animateOnScroll() {
 }
 
 function init() {
-    document.getElementById('scrollable').scrollBy(0, 20);
+    document.getElementById('scrollable').scrollTo(0, 20);
     $('#sideButtons li').click(switchTabs);
     $('#myMail').click(copyToKeyboard);
     $('main').scroll(animateOnScroll);
