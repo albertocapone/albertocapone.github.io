@@ -514,14 +514,14 @@ nav li.active > h3 {
 }
 
 .php {
-    width: 65%;
+    width: 70%;
     animation: php 2s ease-out;
     -moz-animation: php 2s ease-out;
     -webkit-animation: php 2s ease-out;
 }
 
 .mysql {
-    width: 60%;
+    width: 75%;
     animation: mysql 2s ease-out;
     -moz-animation: mysql 2s ease-out;
     -webkit-animation: mysql 2s ease-out;
@@ -535,7 +535,7 @@ nav li.active > h3 {
 }
 
 .node {
-    width: 70%;
+    width: 75%;
     animation: node 2s ease-out;
     -moz-animation: node 2s ease-out;
     -webkit-animation: node 2s ease-out;
@@ -587,7 +587,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 65%;
+        width: 70%;
     }
 }
 
@@ -597,7 +597,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 60%;
+        width: 75%;
     }
 }
 
@@ -617,7 +617,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 70%;
+        width: 75%;
     }
 }
 
@@ -668,7 +668,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 65%;
+        width: 70%;
     }
 }
 
@@ -678,7 +678,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 60%;
+        width: 75%;
     }
 }
 
@@ -698,7 +698,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 70%;
+        width: 75%;
     }
 }
 
@@ -748,7 +748,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 65%;
+        width: 70%;
     }
 }
 
@@ -758,7 +758,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 60%;
+        width: 75%;
     }
 }
 
@@ -778,7 +778,7 @@ nav li.active > h3 {
     }
 
     100% {
-        width: 70%;
+        width: 75%;
     }
 }
 
