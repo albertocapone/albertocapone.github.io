@@ -480,7 +480,7 @@ nav li.active > h3 {
     box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
 }
 
-.javascript, .html-css, .jquery, .sass, .php, .mysql, .laravel, .node {
+.javascript, .html-css, .jquery, .sass, .php, .mysql, .laravel, .react {
      background-color: blue;
      background-image: -webkit-linear-gradient(183deg, #b7b7b7, blue);
      background-image: -moz-linear-gradient(183deg, #b7b7b7, blue);
@@ -537,11 +537,11 @@ nav li.active > h3 {
     -webkit-animation: laravel 2s ease-out;
 }
 
-.node {
+.react {
     width: 75%;
-    animation: node 2s ease-out;
-    -moz-animation: node 2s ease-out;
-    -webkit-animation: node 2s ease-out;
+    animation: react 2s ease-out;
+    -moz-animation: react 2s ease-out;
+    -webkit-animation: react 2s ease-out;
 }
 
 @keyframes javascript {
@@ -614,7 +614,7 @@ nav li.active > h3 {
     }
 }
 
-@keyframes node {
+@keyframes react {
     0% {
         width: 0px;
     }
@@ -695,7 +695,7 @@ nav li.active > h3 {
     }
 }
 
-@-moz-keyframes node {
+@-moz-keyframes react {
     0% {
         width: 0px;
     }
@@ -775,7 +775,7 @@ nav li.active > h3 {
     }
 }
 
-@-webkit-keyframes node {
+@-webkit-keyframes react {
     0% {
         width: 0px;
     }
