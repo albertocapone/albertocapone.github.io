@@ -329,7 +329,8 @@ nav li.active > h3 {
     background-image: linear-gradient(360deg, #f5ef35,#e4ce3d);
     color: #252523;
     font-size: 10px;
-    font-family: Impact;
+    font-family: 'Oswald',
+    sans-serif;
     font-weight: 100;
     text-align: center;
     padding: 5px 0;
