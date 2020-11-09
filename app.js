@@ -72,6 +72,7 @@ function init() {
     $('#sideButtons li').click(switchTabs);
     $('#myMail').click(copyToKeyboard);
     $('main').scroll(animateOnScroll);
+    $(window).on('resize' , () => { location.reload() } );
 }
 
 $(document).ready(init);
